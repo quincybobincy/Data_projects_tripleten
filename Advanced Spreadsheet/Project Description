@@ -1,1 +1,28 @@
-Airbnb
+#Advacne Spreadsheet Analysis with Airbnb
+
+##1. Advanced Spreadsheets
+An exploration of the vacation rental market in New York City.  Data from current Airbnb listings was analyzed to identify markers that would be suitable for client investment.
+
+*Proactive Analysis*
+As a means to distinguish how actively properties were being occupied, I used the reviews they received and dates they were given.  Properties without at least 1 review withhin the last twelve months were considered inactive and not used in further analysis.  In an effert to target rental properties even further, properties where the minimum of nights required was less than or equal to 7 days were selected.  With these points in mind, I determined the top ten most active neighborhoods and of these neighborhoods I continued to focus my analysis on Harlem.  To further filter out any outlier properties I targeted  two bedroom units (the most popular in Harlem) and properties with a price range between $200 and $350.
+
+
+##Part 1. Data Exploration and Filtering
+The initial phase of the process involved an brief assessment of data held in the spreadsheet.  before alterations were made, a copy of the raw data was created and as well as a change log.  Organization included freezing rows and tabs for easy referencing.  Adding filters for and the resizing of columns.  Filters were made to process out inactive properties as well as properties properties that had fewer than 7 day, minimum stay requirements.
+
+##Part 2. Targeting Properties
+Determining which properties should be targeted was a multi stage process after filtering out inactive properties.  In an attempt to make this determination, A pivot table was created to provide a visual of neighborhoods with the most active properties. From here I created another pivot table that that separates listings by their listing size grouped into their neighborhoods. This also involved some data cleaning to make the data more uniform, easier to search for and to make it more accessible.
+
+##Part 3. Calculating Occupancy
+Calculating occupancy involved some more data manipulation in sheets to make script based data accessible in a numeric format.  This required me to transform 'occupied' and 'available' data points into 1's and 0's to create an easily understandable True or False system.  Because this was used with dates and the calendar, I then used our WEEKDAY() function to turn those days of the week into numbers and from their numbers to their corresponding days of the week.  Calculate the average occupancy with another pivot table using the converted data points.
+
+##Part 4. Estimate Revenue of an Investment Property
+Continuing to use the filters from previous steps I made determinations about how to further narrow my results based on the potential desires of the client.  Additional filters could include superhost stauts, a higher frequency of occupancy, and filtering our low priced or luxury properties.  I then made my own determination about which neighborhoods and property sizes to recommend.  
+
+To calculate an estimate of annual revenue I used VLOOKUP() with the average occupancy along with the average prices to provide a sample list.  I created a pivot table  that contained a calculation of the average price and occupancy rates, along with the number of bedrooms and an estimate of annual revenues for those listings.
+	EX.	Price: $300
+		Occupancy Rate: 80%
+		Annual Revenue: 365 days * $300 * 80% = $87,600
+
+For formatting and documentation, I made sure to review my assignment for types in titles, tabs and the like.  I continued the process of updating the change log and also created a Table of Contents.  I made sure to include a copy of the raw data as well as document the changing, creation or deletion of columns or rows.
+
