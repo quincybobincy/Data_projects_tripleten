@@ -25,4 +25,3 @@ To calculate an estimate of annual revenue I used VLOOKUP() with the average occ
 		Annual Revenue: 365 days * $300 * 80% = $87,600
 
 For formatting and documentation, I made sure to review my assignment for types in titles, tabs and the like.  I continued the process of updating the change log and also created a Table of Contents.  I made sure to include a copy of the raw data as well as document the changing, creation or deletion of columns or rows.
-
