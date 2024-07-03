@@ -1,0 +1,47 @@
+3. Business Analytics
+
+This project simulates working with an e-commerce company and being brought on as a junior analyst to analyze some of the company's raw transaction data.
+
+Open the Business Analytics Project Google spreadsheet at the top of this lesson and explore the data in the “raw_user_activity” tab. Each row represents an activity, or event, by a user on the company’s website. Each time a user views a product page, opens their shopping cart, or completes a purchase, the event is captured in the activity logs.
+
+The dataset has the following columns:
+
+user_id: unique customer IDs
+event_type: the type of activity by the user
+category_code: category of the product being viewed or purchased
+brand: company that makes the product
+price: price of the product, in USD
+event_date: date of the user activity, in YYYY-MM-DD format
+
+Part 1. Build a Conversion Funnel
+I created a conversion funnel in a pivot table to showcase how users react with the page and observe how page views turn into shopping cart additions and then on to completed purchases.  Conversion rates for each stage of the funnel and overall rates were added.
+
+Part 2. Prepare Data for Cohort Analysis
+I was tasked with building cohorts based on the month of a user's first purchase and tracked them month - to - month.  Here I had to filter data where the event type fell into the "purchase" category.  In order to calculate a user's first purchase I used the MIN() function as well as making sure to only use unique, none repeating user ids.  Here I also used VLOOKUP() to find the dates from my first_purchase sheet.
+
+From here, I set up monthly data to build and track cohorts.  I created three new columns in the “purchase_activity” sheet to help build the cohorts: event_month, first_purchase_month, and cohort_age.
+
+I used the TEXT() function to create event_month in column H and first_purchase_month in column I. The dataset contains more than one year, so use the YYYY-MM format for your months.
+Use the DATEDIF() function to create cohort_age in column J as the number of months between the first purchase and the event.  The cohort ages should range from 0 to 4 months.
+
+Part 3. Calculate Retention Rates
+In order to group data into cohorts:
+
+	Using the data from the “purchase_activity” sheet, insert another pivot table as a new sheet called “cohort_analysis”
+	
+	Configure your pivot table so that each represents one cohort, which are based on the month in which customers made their first purchase (6 cohorts)
+	
+	The pivot table should also have the count of unique users for each cohort_age in the columns of the pivot table
+
+Calculating overall retention rates
+
+Create a new blank sheet called “retention_rates”; you can use this sheet to layout a table that looks similar to the “cohort_analysis” sheet
+
+Add row labels in cells A3 to A7 for each cohort in chronological order 
+
+Add column labels in cells B2 to E2 that represent the cohort ages from 1 to 4 months (you can’t calculate retention rates for a cohort’s first month, so you don’t need to include age 0)
+
+In cell B3, write a formula that calculates the retention rate for each cohort at each cohort age in the table you created, based on the starting cohort sizes.
+
+Part 4. Organization
+This simply entailed the organization of my spreadsheet.  I created and executive summary, table of contents, and creates summaries for my analysis and results.  Some reordering was done and I made sure to create a thematic format across all of the tabs and pages with the addition of some coloring.
