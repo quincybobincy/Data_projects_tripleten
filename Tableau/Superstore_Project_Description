@@ -1,0 +1,66 @@
+#4. Tableau
+
+A project to introductory data visualization with datasets in Tableau using the Superstore.xls dataset.  My task was designed to overview the superstore dataset as a consultant and offer insights to increase profitability.  
+
+##Part 1. Profits and Losses
+
+I was first tasked to identify profit centers and losses answering these questions:
+
+	1. Among the pairs of dimensions (e.g., subcategory + region, or shipping mode + product ID) which are the two biggest profit centers and two biggest loss-makers? Justify your conclusion with a visualization.
+
+	2. Which products should the superstore stop selling? Justify your conclusion with a visualization.
+
+	3. Which product subcategories should the store focus on and which should they stop selling? Choose 3 of each.
+
+
+##Part 2. Advertising
+
+Here, the superstore wants to know if advertising would be worth it. Advertising works over time and geography, and your average profit per unit sold should be high enough to justify it.
+
+I was then asked to identify the 3 best combinations of states and month of the year to advertise in. Make a visualization of the average profit for each month of the year for those 3 states and argue how much you would be willing to pay in advertising for those states in those months.
+
+Assuming that they would only be willing to spend 1/5 of profits on advertising I wanted to display what I thought would bring on the greatest return on ad - spend ratio.
+
+##Part 3. Returned Items
+
+In the final portion of this project we observed returned items to check for abnormal rates of return with both products and customers.
+
+Here, it was required to LEFT JOIN the Returns table to the Orders table. In order to calculate a "Rate of Return" I followed these procedures:
+
+	1. I made the Returned field into a calculated field where the null values are 0 and the Yes values are 1.
+
+	2. Used this new field to make a visualization for each of the following questions: 1. Which products have the highest return rate? 2. Which customers have the highest return rate?
+
+And to finish I made a separate sheet with a visualization of the average profit against and the average return rate against the sub-categories.
+
+##Here are some of my conclusions: 
+
+1. 	Profit centers: On average, copiers and accessories perform the highest across every sector.
+
+	Profit losers: Tables represent the greatest losses across every segment whereas the second greatest loser would be Bookcases when comparing total profits.
+
+2.	Looking at "Losing Products" and based on the information in the first visual, these are the products that are the least profitable and in choosing which products to eliminate the "Profit Centers and Losers" visual can be used to focus on other products from losing sub-categories and eliminate products from those losing sub-categories.
+
+3.	Taking into account the previous visuals and "Sub-category Profits" we can see that Copiers, Phones, and Accesories are the largest profit eaners and could be given more focus.  Conversely, Tables is the largest loser while bookcases and supplies are the next, albeit distant, profit losers.
+
+
+Part two
+
+
+1.	"Monthly Profit Averages" After taking into account the size of the states and determining which months have the largest average profit returns these were the results.  Vermont would have originally been included in the results but only had order dates in the month of December and was thus excluded.  
+
+	When it comes to determining how much money to put towards advertising I found the total profit for October, September and December for each month and calculated what 1/5 of that profit would look like for the sum of those three months.
+
+	Indiana I rounded at $2,200 for the span of those three months
+
+	Minnesota I rounded at $1,300 for the span of those three months
+
+	Rhode Island I rounded at $1,400 for the span of those three months
+
+
+Part three
+
+
+1. "Item Return Ratio" highlights individual items with the highest rate of return. It signifies that there are 5 products with a 100% rate of return.  These items would be likely candidates to consider a cease in sales.
+
+2. "Customer Return Rate" indicates how often a Customer ID is linked to the return of an item.
